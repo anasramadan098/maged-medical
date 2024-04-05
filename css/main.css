@@ -1,6 +1,7 @@
 :root {
     --main-color:#247cff;
     --seconde-color:#717275;
+    --shadow:0 1rem 3rem rgba(0,0,0,.175);
 }
 * {
     padding: 0;
@@ -55,7 +56,7 @@ header {
     }
     a.download {
         margin: 0 10px;
-        padding: 13px;
+        padding: 10px;
         background: #eee;
         border-radius: 4px;
     }
@@ -251,6 +252,284 @@ footer {
     }
 }
 /* End Footer */
+
+/* Start Timeline */
+section {
+    padding: 20px 60px;
+    h2 {
+        font-size: 4em;
+        text-align: center;
+        color: var(--main-color);
+    }
+}
+.timeline {
+    padding: 60px;
+
+    .parts {
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #eee;
+        }
+        .part {
+            position: relative;
+            padding-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            width: 100%;
+            .text {
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+                background-color: #fff;
+                width: 41.6666666667%;
+                h3 {
+                    position: relative;
+                    background-color: #000;
+                    color: #fff;
+                    font-size: 1.7em;
+                    padding:20px;
+                    &.right::before,
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 100%;
+                        transform: translateY(-50%);
+                        border-left: 10px solid #000;
+                        border-top: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                    }
+                }
+                p {
+                    padding:20px;
+                    line-height: 2;
+                    color: var(--seconde-color);
+                }
+            }
+            .icon {
+                box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+                background-color: #fff;
+                width: 70px;
+                height: 70px;
+                z-index: 10;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    color: var(--main-color);
+                    font-size: 2em;
+                }
+            }
+            span.date {
+                width: 41.6666666667%;
+            }
+            
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+                h3 {
+                    &::before {
+                        left:auto !important;
+                        right: 100%;
+                        border-left: none !important;
+                        border-right: 10px solid #000;
+                    }
+                }
+            }
+        }
+    }
+}
+/* End Timeline */
+/* Start Skills */
+section.skills {
+    padding: 20px 60px;
+    .cards {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        .card {
+            width: calc(100% / 2 - 30px);
+            background-color: #fff;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            border-radius: 6px;
+            transition: .3s;
+            i {
+                font-size: 2em;
+                color: var(--main-color);
+                transition: .3s;
+            }
+            h4 {
+                font-size: 1.2em;
+                margin-top: 30px;
+            }
+            &:hover {
+                box-shadow: 0 2rem 3rem rgba(0,0,0,.175);
+                i {
+                    transform: scale(1.5);
+                }
+            }
+        }
+    }
+}
+/* End Skills */
+/* Start Cores */
+section.cores {
+    background-color: var(--main-color);
+    h2 {
+        color: #fff;
+    }
+    .cards {
+        .card {
+            text-align: center;
+            width: calc(100% / 3 - 30px);
+            h4 {
+                font-size: 1em;
+            }
+        }
+    }
+}
+/* End Cores */
+/* Start Experience */
+section.experience {
+    .work {
+        background-color: #fff;
+        box-shadow: var(--shadow);
+        margin: 50px 0;
+        padding: 20px ;
+        h3 {
+            font-size: 1.5em;
+            color: var(--main-color);
+        }
+        .title {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            span {
+                font-weight: bold;
+            }
+        }
+        ul li::before{ 
+            font-family: 'Font Awesome 5 Free';
+            content: '\f007';
+            color: var(--main-color);
+        }
+    }
+}
+/* End Experience */
+/* Start hobbies */
+section.hobbies {
+    .cards {
+        .card {
+            width: calc(100% / 3 - 30px);
+        }
+    }
+}
+/* End hobbies */
+/* Start references */
+section.references {
+    background-color: var(--main-color);
+    h2 {
+        color: #fff;
+    }
+    .cards {
+        .card {
+            width: 100%;
+            h3 {
+                font-size: 1.5em;
+            }
+            span {
+                color: var(--seconde-color);
+                display: block;
+                margin: 10px 0;
+            }
+            p {
+                color: #000;
+                line-height: 2;
+            }
+            i {
+                margin: 10px 20px 0 0;
+                transition: .3s;
+                &:hover {
+                    transform: scale(1.5) !important;
+                }
+            }
+            &:hover {
+                i {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+/* End references */
+/* Start edu */
+section.edu {
+    ul {
+        li {
+            padding:20px;
+            background-color: #fff;
+            box-shadow: var(--shadow);
+            margin-top: 30px;
+        }
+    }
+}
+/* End edu */
+/* Start work */
+.work {
+    .box {
+        &:not(:last-child) {
+            border-bottom: 1px solid var(--main-color);
+        }
+        margin: 50px 0;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+                color: var(--seconde-color);
+            }
+            a {
+                color: var(--main-color);
+                font-size: 2em;
+            }
+            h4 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 2.5em;
+                margin: 10px 0;
+                color: var(--main-color);
+            }
+        }
+        & > h4 {
+            color: var(--main-color);
+            font-size: 2.5em;
+        }
+        p {
+            color: var(--seconde-color);
+            margin: 10px 0;
+            line-height: 2;
+        }
+        ul {
+            margin-top: 20px;
+            li {
+                box-shadow: 0 .1rem .9rem rgba(0,0,0,.10);
+                margin-bottom: 20px;
+                padding: 15px;
+            }
+        }
+    }
+}
+/* End work */
+
 /* Query */
 @media (max-width:767px) {
     .text {
@@ -262,6 +541,7 @@ footer {
         padding: 100px 20px;
     }
     header {
+        gap: 10px;
         .logo {
             span {
                 font-size: 1.5em;
@@ -272,6 +552,9 @@ footer {
             a {
                 font-size: 14px;
             }
+        }
+        a.download {
+            display: block;
         }
     }
     section.meet {
@@ -293,5 +576,47 @@ footer {
                 width: 95% !important;
             }
         }
+    }
+    .timeline {
+        .parts {
+            &::before {
+                left: 5%;
+            }
+            .part {
+                justify-content: flex-start;
+                gap: 30px;
+                .text {
+                    order: 1;
+                    width: 60%;
+                }
+                span.date {
+                    width: 100%;
+                    order: -1;
+                    text-align: right;
+                }
+                h3 {
+                    &:before {
+                        left:auto !important;
+                        right: 100% !important;
+                        border-left: none !important;
+                        border-right: 10px solid #000;
+                    }
+                }
+                &:nth-child(2n) {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+    .skills {
+        .card {
+            width: 100% !important;
+        }
+    }
+    section {
+        padding: 20px;
+    h2 {
+        font-size: 3em;
+    }
     }
 }
