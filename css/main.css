@@ -18,6 +18,42 @@ ul {
 a {
     text-decoration: none;
 }
+.mouse {
+    .small {
+        position: fixed;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #d2313d;
+        z-index: 1000;
+        transition: .1s;
+    } 
+    .big {
+        position: fixed;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: #d2313c5c;
+        transition: .3s;
+
+    }
+}
+.fade-up {
+    animation: fade-up 2s ease-in-out;
+    animation-fill-mode: both;
+  }
+  
+@keyframes fade-up {
+from {
+    opacity: 0;
+    transform: translateY(20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+  
 /* Start Header */
 header {
     background-color: #f8f9fa;

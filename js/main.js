@@ -9,6 +9,26 @@ setInterval(() => {
     changeWelcomeWord()
 }, 2000);
 
+
+// Loop On Sections
+window.onscroll = function () {
+    document.querySelectorAll('section').forEach(e => {
+            if (scrollY >= e.offsetTop - 800) {
+                e.classList.add('fade-up')
+            } else {
+                e.classList.remove('fade-up')
+            }
+    });
+}
+
+
+
+document.addEventListener('mousemove',(e) => {
+    document.querySelector('.mouse .small').style.transform  = `translate(${e.clientX}px,${e.clientY}px)`
+    document.querySelector('.mouse .big').style.transform  = `translate(${e.clientX - 20}px,${e.clientY - 20}px)`
+    // console.log(document.querySelector('.mouse .small'));
+})
+
 function changeWelcomeImg() {
     holderImg.style.opacity = '0';
     setTimeout(() => {
