@@ -35,6 +35,7 @@ a {
         height: 45px;
         border-radius: 50%;
         background-color: #d2313c5c;
+        z-index: 1000;
         transition: .3s;
 
     }
