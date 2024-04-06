@@ -13,7 +13,7 @@ setInterval(() => {
 // Loop On Sections
 window.onscroll = function () {
     document.querySelectorAll('section').forEach(e => {
-            if (scrollY >= e.offsetTop - 800) {
+            if (scrollY >= e.offsetTop - 900) {
                 e.classList.add('fade-up')
             } else {
                 e.classList.remove('fade-up')

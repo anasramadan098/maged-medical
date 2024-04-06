@@ -19,6 +19,7 @@ a {
     text-decoration: none;
 }
 .mouse {
+    pointer-events: none;
     .small {
         position: fixed;
         width: 15px;
@@ -103,24 +104,20 @@ section.welcome {
     padding: 100px 60px;
     .holder {
         position: relative;
-        overflow: hidden;
-        max-height: 600px;
         img {
-            max-width: 100%;
+            max-height: 700px;
+            width: 100%;
             transition: .3s;
         }
         .text {
-            max-width: 50%;
-            opacity: .8;
             background-color: #fff;
-            position: absolute;
-            bottom: 0;
-            right: 0;
+            position: relative;
             padding: 20px 30px;
             h2 {
                 font-size: 2.2em;
                 color: #333;
                 overflow: hidden;
+                text-align: left;
                 span {
                     color: var(--main-color);
                     display: inline-block;
