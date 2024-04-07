@@ -30,12 +30,12 @@ a {
         transition: .1s;
     } 
     .big {
+        z-index: 1000;
         position: fixed;
         width: 45px;
         height: 45px;
         border-radius: 50%;
         background-color: #d2313c5c;
-        z-index: 1000;
         transition: .3s;
 
     }
@@ -458,52 +458,6 @@ section.experience {
     }
 }
 /* End Experience */
-/* Start hobbies */
-section.hobbies {
-    .cards {
-        .card {
-            width: calc(100% / 3 - 30px);
-        }
-    }
-}
-/* End hobbies */
-/* Start references */
-section.references {
-    background-color: var(--main-color);
-    h2 {
-        color: #fff;
-    }
-    .cards {
-        .card {
-            width: 100%;
-            h3 {
-                font-size: 1.5em;
-            }
-            span {
-                color: var(--seconde-color);
-                display: block;
-                margin: 10px 0;
-            }
-            p {
-                color: #000;
-                line-height: 2;
-            }
-            i {
-                margin: 10px 20px 0 0;
-                transition: .3s;
-                &:hover {
-                    transform: scale(1.5) !important;
-                }
-            }
-            &:hover {
-                i {
-                    transform: scale(1);
-                }
-            }
-        }
-    }
-}
-/* End references */
 /* Start edu */
 section.edu {
     ul {

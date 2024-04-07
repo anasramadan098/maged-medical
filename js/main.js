@@ -9,7 +9,6 @@ setInterval(() => {
     changeWelcomeWord()
 }, 2000);
 
-
 // Loop On Sections
 window.onscroll = function () {
     document.querySelectorAll('section').forEach(e => {
