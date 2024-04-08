@@ -1,8 +1,13 @@
 // Set Intervals For Welcome
 const holderImg = document.querySelector('.holder img');
-const words = ['health','days','lives'];
 const wordsHolder = document.querySelector('.welcome h2 span');
 let imgIndex = 1;
+const lang = document.body.lang
+
+let words = ['health','days','lives'];
+if (lang == 'ar') {
+    words = ['صحة','أيام','حياة']
+} 
 
 setInterval(() => {
     changeWelcomeImg();
@@ -32,16 +37,30 @@ function changeWelcomeImg() {
     holderImg.style.opacity = '0';
     setTimeout(() => {
         if (imgIndex <= 3) {
-            if (imgIndex == 1) {
-                holderImg.src = `imgs/welcome-2.jpeg`;
-            } else if(imgIndex == 2) {
-                holderImg.src = `imgs/welcome-3.jpeg`;
-            }  else if(imgIndex == 3) {
-                holderImg.src = `imgs/welcome-1.jpeg`;
-            } 
+            if (lang == 'en') {
+                if (imgIndex == 1) {
+                    holderImg.src = `imgs/welcome-2.jpeg`;
+                } else if(imgIndex == 2) {
+                    holderImg.src = `imgs/welcome-3.jpeg`;
+                }  else if(imgIndex == 3) {
+                    holderImg.src = `imgs/welcome-1.jpeg`;
+                } 
+            } else {
+                if (imgIndex == 1) {
+                    holderImg.src = `../imgs/welcome-2.jpeg`;
+                } else if(imgIndex == 2) {
+                    holderImg.src = `../imgs/welcome-3.jpeg`;
+                }  else if(imgIndex == 3) {
+                    holderImg.src = `../imgs/welcome-1.jpeg`;
+                } 
+            }
             imgIndex++
         } else {
-            holderImg.src = `imgs/welcome-1.jpeg`
+            if (lang == 'en') {
+                holderImg.src = `imgs/welcome-1.jpeg`
+            } else {
+                holderImg.src = `../imgs/welcome-1.jpeg`
+            }
             imgIndex = 1;
         }
         holderImg.style.opacity = '1';
