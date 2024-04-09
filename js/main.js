@@ -4,10 +4,12 @@ const wordsHolder = document.querySelector('.welcome h2 span');
 let imgIndex = 1;
 const lang = document.body.lang
 
-let words = ['health','days','lives'];
+let words = ['health','day','live'];
 if (lang == 'ar') {
-    words = ['صحة','أيام','حياة']
-} 
+    words = ['صحة','يوم','حياة']
+} else if (lang == 'fr') {
+    words = ['Santé','Jour','Vie'];
+}
 
 setInterval(() => {
     changeWelcomeImg();
